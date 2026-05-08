@@ -610,7 +610,7 @@ function showDishForm(dishId = null) {
             <div class="form-row"><div class="form-group"><label>Размер порции (г) *</label><input type="number" id="dish-portion" value="${dish?.portionSize||''}" required min="0.01" step="any"></div></div>
             <div class="form-row"><div class="form-group"><label>Изображения (пути через запятую, макс. 5)</label><input type="text" id="dish-images" value="${escapeAttr(dish?.images?.join(', ')||'')}" placeholder="images/photo1.png"></div></div>
             <h4>Состав блюда *</h4>${ingHtml}
-            <h4>КБЖУ на порцию(100гр)</h4>
+            <h4>КБЖУ на порцию</h4>
             <div class="form-row">
                 <div class="form-group"><label>Калорийность</label><input type="number" id="dish-calories" value="${dish?.calories??''}" required min="0" step="any"></div>
                 <div class="form-group"><label>Белки</label><input type="number" id="dish-protein" value="${dish?.protein??''}" required min="0" step="any"></div>
