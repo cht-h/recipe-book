@@ -637,7 +637,6 @@ body {
     color: var(--text-white);
 }
 
-/* ==================== Карусель изображений в карточках ==================== */
 .card-carousel {
     position: relative;
     width: 100%;
@@ -733,7 +732,6 @@ body {
     background: #fff;
 }
 
-/* ==================== Карусель в модальном окне ==================== */
 .modal-carousel {
     position: relative;
     width: 100%;
