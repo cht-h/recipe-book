@@ -1,10 +1,3 @@
-
-/**
- * @param {Array} ingredients - массив { productId, quantity }
- * @param {Object} productsMap - словарь { [productId]: { calories, protein, fat, carbs } }
- * @returns {{ calories: number, protein: number, fat: number, carbs: number }}
- */
-
 function calculateNutrition(ingredients, productsMap) {
     const results = ingredients.map(ing => {
         const product = productsMap[ing.productId] || { calories: 0, protein: 0, fat: 0, carbs: 0 };
