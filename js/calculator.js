@@ -1,7 +1,5 @@
 
 /**
- * рассчитывает калорийность, белки, жиры и углеводы на порцию блюда.
- *
  * @param {Array} ingredients - массив { productId, quantity }
  * @param {Object} productsMap - словарь { [productId]: { calories, protein, fat, carbs } }
  * @returns {{ calories: number, protein: number, fat: number, carbs: number }}

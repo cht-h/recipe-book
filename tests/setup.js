@@ -29,7 +29,6 @@ const TEST_PRODUCTS = {
         carbs: 0
     },
 
-    //граничные значения БЖУ
     boundary100: {
         id: 'test-boundary',
         name: 'ГраничныйПродукт',
@@ -39,7 +38,6 @@ const TEST_PRODUCTS = {
         carbs: 20
     },
 
-    //каждый макронутриент по 100 г (для теста валидации)
     maxEach: {
         id: 'test-max',
         name: 'Максимальный',
