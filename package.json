@@ -1,0 +1,17 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "description": "Книга рецептов с тестами",
+  "scripts": {
+    "test": "jest --watchAll=false",
+    "test:watch": "jest --watchAll=true",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  }
+}

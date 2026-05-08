@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1778068235393" clover="3.2.0">
+  <project timestamp="1778068235394" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3" elements="25" coveredelements="23" complexity="0" loc="12" ncloc="12" packages="2" files="2" classes="2"/>
+    <package name="js">
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
+      <file name="calculator.js" path="C:\Users\chern\OneDrive\Desktop\testing\js\calculator.js">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <line num="14" count="15" type="stmt"/>
+        <line num="15" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="18" count="16" type="stmt"/>
+        <line num="26" count="16" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="41" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="42" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="tests">
+      <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
+      <file name="setup.js" path="C:\Users\chern\OneDrive\Desktop\testing\tests\setup.js">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="78" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="79" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

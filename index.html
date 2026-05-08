@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга рецептов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Боковая панель навигации -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">📖 Книга рецептов</h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-view="products">
+                    <span class="nav-icon">🍎</span>
+                    Продукты
+                </button>
+                <button class="nav-btn" data-view="dishes">
+                    <span class="nav-icon">🍽️</span>
+                    Блюда
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Представление продуктов -->
+            <section id="products-view" class="view active">
+                <div class="view-header">
+                    <h2>Продукты</h2>
+                    <button class="btn btn-primary" id="add-product-btn">
+                        + Добавить продукт
+                    </button>
+                </div>
+                
+                <!-- Форма добавления/редактирования продукта (скрыта по умолчанию) -->
+                <div id="product-form-container" class="form-container hidden"></div>
+
+                <!-- Фильтры и поиск -->
+                <div class="filters-bar">
+                    <div class="search-box">
+                        <input type="text" id="product-search" placeholder="Поиск по названию...">
+                    </div>
+                    <div class="filter-group">
+                        <label>Категория:</label>
+                        <select id="product-category-filter">
+                            <option value="">Все</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Готовность:</label>
+                        <select id="product-cooking-filter">
+                            <option value="">Все</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Флаги:</label>
+                        <div class="flag-filters">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="flag-filter" value="vegan"> Веган
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="flag-filter" value="glutenFree"> Без глютена
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="flag-filter" value="sugarFree"> Без сахара
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sort-bar">
+                    <span>Сортировать по:</span>
+                    <select id="product-sort">
+                        <option value="name">Название</option>
+                        <option value="calories">Калорийность</option>
+                        <option value="protein">Белки</option>
+                        <option value="fat">Жиры</option>
+                        <option value="carbs">Углеводы</option>
+                    </select>
+                    <button id="sort-asc" class="btn btn-sm btn-secondary active" title="По возрастанию">▲</button>
+                    <button id="sort-desc" class="btn btn-sm btn-secondary" title="По убыванию">▼</button>
+                </div>
+
+                <!-- Список продуктов -->
+                <div id="products-list" class="cards-grid"></div>
+            </section>
+
+            <!-- Представление блюд -->
+            <section id="dishes-view" class="view">
+                <div class="view-header">
+                    <h2>Блюда</h2>
+                    <button class="btn btn-primary" id="add-dish-btn">
+                        + Добавить блюдо
+                    </button>
+                </div>
+
+                <!-- Форма добавления/редактирования блюда (скрыта по умолчанию) -->
+                <div id="dish-form-container" class="form-container hidden"></div>
+
+                <!-- Фильтры и поиск -->
+                <div class="filters-bar">
+                    <div class="search-box">
+                        <input type="text" id="dish-search" placeholder="Поиск по названию...">
+                    </div>
+                    <div class="filter-group">
+                        <label>Категория:</label>
+                        <select id="dish-category-filter">
+                            <option value="">Все</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Флаги:</label>
+                        <div class="flag-filters">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="dish-flag-filter" value="vegan"> Веган
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="dish-flag-filter" value="glutenFree"> Без глютена
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="dish-flag-filter" value="sugarFree"> Без сахара
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Список блюд -->
+                <div id="dishes-list" class="cards-grid"></div>
+            </section>
+
+            <!-- Модальное окно для просмотра -->
+            <div id="modal-overlay" class="modal-overlay hidden">
+                <div class="modal">
+                    <div class="modal-header">
+                        <h3 id="modal-title"></h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div id="modal-content" class="modal-body"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast уведомления -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Подключение скриптов -->
+    <script src="data/initial-data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
