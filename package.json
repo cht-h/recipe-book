@@ -1,11 +1,17 @@
 {
   "name": "cookbook",
   "version": "1.0.0",
-  "description": "Книга рецептов с тестами",
+  "description": "Книга рецептов с бэкендом и тестами",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
     "test": "jest --watchAll=false",
     "test:watch": "jest --watchAll=true",
     "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "jest": "^29.7.0"
