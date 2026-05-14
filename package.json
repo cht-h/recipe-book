@@ -8,6 +8,7 @@
     "test": "jest --watchAll=false",
     "test:unit": "jest tests/calculator.test.js --watchAll=false",
     "test:integration": "jest tests/api.test.js --watchAll=false --runInBand",
+    "test:ui": "jest tests/ui/ui.test.js --watchAll=false --runInBand",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
+    "puppeteer": "^24.43.1",
     "supertest": "^6.3.4"
   },
   "jest": {
